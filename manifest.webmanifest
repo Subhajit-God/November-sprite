@@ -1,0 +1,11 @@
+{
+  "name": "November Sprint Study Planner",
+  "short_name": "Study Sprint",
+  "description": "Class 8 WBBSE November study planner",
+  "start_url": "./november_sprint_study_planner.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071126",
+  "theme_color": "#07142f",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

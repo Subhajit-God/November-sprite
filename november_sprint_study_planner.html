@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07142f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>November Sprint | Class 8 WBBSE Study Planner</title>
+<style>
+:root{--bg:#071126;--panel:#0c1b3b;--panel2:#10244a;--line:#1d3e78;--text:#eef4ff;--muted:#9fb4dc;--blue:#3988ff;--cyan:#2dd4ff;--gold:#ffc83d;--green:#38d996;--pink:#ff62b4;--shadow:0 12px 35px #0004}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#112d62 0,transparent 36%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}.app{display:grid;grid-template-columns:235px minmax(0,1fr);min-height:100vh}.sidebar{overflow-y:auto;background:#07132cdd;border-right:1px solid var(--line);padding:22px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:22px}.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 18px;border-bottom:1px solid var(--line)}.brand-icon{font-size:30px}.brand strong{display:block;font-size:16px;letter-spacing:.5px}.brand small{color:var(--muted)}.nav{display:grid;gap:7px}.nav button{border:1px solid transparent;background:transparent;color:#b9c9e9;text-align:left;padding:12px;border-radius:12px;display:flex;align-items:center;gap:12px}.nav button.active,.nav button:hover{background:linear-gradient(100deg,#1461d6,#2638b9);border-color:#31b8ff;color:white;box-shadow:0 0 18px #168dff33}.nav span{font-size:19px;width:24px;text-align:center}.side-note{margin-top:auto;color:#f7d86a;font-size:13px;line-height:1.55;padding:12px}.main{min-width:0;padding:24px clamp(14px,3vw,36px) 40px;max-width:1600px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}.topbar h1{font-size:clamp(26px,4vw,42px);margin:5px 0 0;line-height:1.1}.topbar h1 em{font-style:normal;color:var(--gold)}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #31518b;background:#102650;color:var(--text);padding:10px 13px;border-radius:11px}.btn:hover{filter:brightness(1.18)}.btn.primary{background:linear-gradient(100deg,#087df0,#303edb);border-color:#2ccaff}.btn.gold{background:linear-gradient(100deg,#ffdb62,#ffad21);border-color:#ffe58d;color:#17213a;font-weight:800}.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.8fr);gap:16px;margin-bottom:16px}.panel{background:linear-gradient(145deg,#0c1d40f5,#0a1732f5);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);min-width:0}.date-line{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.date-line h2{margin:0;font-size:clamp(20px,2.5vw,28px)}.pill{display:inline-flex;align-items:center;gap:6px;background:#17345d;border:1px solid #315c96;border-radius:999px;padding:6px 10px;color:#d8e9ff;font-size:12px}.countdown{background:linear-gradient(135deg,#ffdf63,#ffad26);color:#15213c;border-radius:16px;padding:12px 17px;min-width:150px;text-align:center;box-shadow:0 0 24px #ffbf2e2b}.countdown strong{display:block;font-size:30px;line-height:1.05}.countdown span{font-size:11px;font-weight:900;letter-spacing:1px}.daily-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 14px}.daily-head h3,.section-head h2{margin:0}.day-select{background:#0a1630;border:1px solid var(--line);color:var(--text);padding:10px;border-radius:10px;max-width:100%}.task-progress{display:flex;align-items:center;gap:16px;margin:16px 0}.ring{--p:0%;width:96px;height:96px;border-radius:50%;background:conic-gradient(var(--cyan) var(--p),#203960 0);display:grid;place-items:center;flex-shrink:0}.ring-inner{width:76px;height:76px;border-radius:50%;background:#0b1a37;display:grid;place-content:center;text-align:center}.ring-inner b{font-size:22px}.ring-inner small{color:var(--muted);font-size:11px}.progress-copy{flex:1}.progress-copy strong{font-size:18px}.progress-copy p{margin:5px 0;color:var(--muted);font-size:13px}.bar{height:8px;background:#1a3157;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:inherit;transition:width .25s}.task-list{display:grid;gap:9px}.task{display:flex;align-items:flex-start;gap:11px;padding:12px;background:#0d2143;border:1px solid #1b3a6a;border-radius:12px;transition:.15s}.task:hover{border-color:#328de8;transform:translateY(-1px)}.task input{appearance:none;width:20px;height:20px;flex-shrink:0;border:2px solid #6885b8;border-radius:6px;margin:1px 0 0;cursor:pointer}.task input:checked{background:var(--green);border-color:var(--green)}.task input:checked:after{content:"✓";display:block;color:#06251b;text-align:center;font-weight:900;line-height:16px}.task.done .task-title{text-decoration:line-through;color:#8fa7c9}.task-title{font-size:14px;line-height:1.45}.tag{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.6px;font-weight:800;color:#9fe7ff;margin-top:5px}.task-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.right-stack{display:grid;gap:16px;align-content:start}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.section-head h2{font-size:18px}.subject-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.subject{padding:13px;border:1px solid var(--line);border-radius:14px;background:#0d2143}.subject-top{display:flex;justify-content:space-between;gap:6px;align-items:center;margin-bottom:10px}.subject-name{font-weight:750;font-size:13px}.subject-emoji{font-size:19px}.subject small{color:var(--muted)}.subject .bar{height:6px;margin-top:9px}.quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.quick{background:#0d2143;border:1px solid var(--line);padding:12px;border-radius:13px}.quick strong{display:block;font-size:21px}.quick span{font-size:11px;color:var(--muted)}.timer{text-align:center}.timer-face{width:155px;height:155px;border-radius:50%;margin:14px auto;background:conic-gradient(var(--cyan) 0deg,#18345e 0deg);display:grid;place-items:center;position:relative}.timer-face:before{content:"";position:absolute;inset:9px;background:#0b1a37;border-radius:50%}.timer-content{position:relative}.timer-content strong{font-size:32px;display:block}.timer-content small{color:var(--muted)}.timer-buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.timer-settings{display:flex;gap:7px;justify-content:center;margin:10px 0}.timer-settings button{font-size:12px;padding:7px 10px}.view{display:none}.view.active{display:block}.two-col{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);gap:16px}.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}.weekday{text-align:center;font-size:11px;color:var(--muted);padding:6px 0}.cal-day{border:1px solid var(--line);background:#0d2143;color:var(--text);border-radius:10px;min-height:58px;padding:7px 4px;text-align:center}.cal-day small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.cal-day.selected{border-color:var(--cyan);box-shadow:inset 0 0 0 1px var(--cyan);background:#123567}.cal-day.has-tasks:after{content:"•";color:var(--gold);display:block;font-size:18px;line-height:10px}.syllabus-list{display:grid;gap:10px}.syllabus-row{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:10px;background:#0d2143;border:1px solid var(--line);padding:12px;border-radius:12px}.syllabus-row input{width:18px;height:18px;accent-color:var(--green)}.syllabus-row small{color:var(--muted)}.mock-list{display:grid;gap:10px}.mock{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px;background:#0d2143;border:1px solid var(--line);border-radius:13px}.mock strong{display:block}.mock small{color:var(--muted)}.mock .date{color:var(--gold);font-weight:800;white-space:nowrap}.search{width:100%;background:#07162e;border:1px solid var(--line);color:var(--text);padding:11px 13px;border-radius:11px;margin-bottom:12px}.muted{color:var(--muted)}.notice{padding:13px;border:1px solid #795e22;background:#382d14;border-radius:12px;color:#ffe7a3;font-size:13px;line-height:1.5}.footer{text-align:center;color:#7f98c4;font-size:12px;padding:25px 0 0}.light{--bg:#edf3ff;--panel:#fff;--panel2:#e7efff;--line:#cad8f2;--text:#12213f;--muted:#5c6e91;--shadow:0 10px 30px #244b8510;background:radial-gradient(ellipse at 15% 0%,#dbe8ff 0,transparent 36%),var(--bg)}.light .sidebar{background:#f7f9ff;border-color:var(--line)}.light .nav button{color:#30476e}.light .panel{background:linear-gradient(145deg,#fff,#f4f7ff)}.light .task,.light .subject,.light .quick,.light .cal-day,.light .syllabus-row,.light .mock{background:#f5f8ff;border-color:var(--line)}.light .ring-inner,.light .timer-face:before{background:#fff}.light .day-select,.light .search{background:#fff;color:var(--text)}.light .task input{background:#fff}.light .nav button.active{color:#fff}.light .notice{color:#654a00;background:#fff7dd}.mobile-menu{display:none}
+@media(max-width:1000px){.app{grid-template-columns:76px minmax(0,1fr)}.sidebar{padding:18px 9px;align-items:center}.brand{padding:0 0 18px;justify-content:center}.brand-copy,.nav-label,.side-note{display:none}.nav{width:100%}.nav button{justify-content:center;padding:12px 5px}.nav span{font-size:22px}.hero,.two-col{grid-template-columns:1fr}.right-stack{grid-template-columns:repeat(2,minmax(0,1fr))}.right-stack .panel:last-child{grid-column:1/-1}}
+@media(max-width:620px){.app{display:block}.sidebar{position:sticky;z-index:5;top:0;height:auto;flex-direction:row;padding:8px 10px;justify-content:space-between;border-right:0;border-bottom:1px solid var(--line)}.brand{border:0;padding:0}.brand-icon{font-size:24px}.brand-copy{display:block}.brand strong{font-size:13px}.brand small{font-size:10px}.nav{display:flex;justify-content:flex-end;width:auto;gap:3px}.nav button{padding:8px;border-radius:9px}.nav span{font-size:18px}.main{padding:16px 12px 30px}.topbar{align-items:flex-start}.top-actions .btn{font-size:12px;padding:8px}.topbar h1{font-size:29px}.hero{gap:12px}.panel{padding:15px;border-radius:16px}.right-stack{grid-template-columns:1fr}.right-stack .panel:last-child{grid-column:auto}.subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.calendar-grid{gap:3px}.cal-day{min-height:48px;font-size:12px}.cal-day small{font-size:9px}.task{padding:11px}.countdown{min-width:110px}.countdown strong{font-size:24px}.date-line h2{font-size:20px}.daily-head{align-items:flex-start;flex-direction:column}.day-select{width:100%}}
+
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:9px;align-items:center}.form-grid input,.form-grid textarea{width:100%;background:#07162e;border:1px solid var(--line);color:var(--text);padding:11px;border-radius:10px}.form-grid textarea{grid-column:1/-1;resize:vertical}.feature-list{display:grid;gap:9px}.feature-item{background:#0d2143;border:1px solid var(--line);border-radius:12px;padding:13px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.feature-item p{margin:5px 0;color:var(--muted);font-size:13px;white-space:pre-wrap}.feature-item button{padding:6px 9px}.soft{border:0;border-top:1px solid var(--line);margin:22px 0}.badge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:12px}.badge-card{padding:14px;border:1px solid var(--line);background:#0d2143;border-radius:13px;text-align:center}.badge-card.locked{opacity:.38;filter:grayscale(1)}.badge-card strong{display:block;margin-top:6px}.badge-card small{color:var(--muted)}.mobile-nav-hint{display:none}.custom-meta{font-size:11px;color:var(--gold);margin-top:4px}.light .feature-item,.light .badge-card{background:#f5f8ff;border-color:var(--line)}.light .form-grid input,.light .form-grid textarea{background:#fff;color:var(--text)}
+@media(max-width:620px){.form-grid{grid-template-columns:1fr}.feature-item{align-items:flex-start}.badge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.main{padding:14px 12px 30px}.nav{display:flex;overflow-x:auto;gap:5px;scrollbar-width:none}.nav button{min-width:48px}.sidebar{overflow:hidden}.brand{min-width:42px}.nav-label{display:none!important}}
+
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon">🏆</div><div class="brand-copy"><strong>NOVEMBER SPRINT</strong><small>Class 8 • WBBSE</small></div></div>
+  <nav class="nav" aria-label="Main navigation">
+    <button class="active" data-view="dashboard"><span>⌂</span><b class="nav-label">Dashboard</b></button>
+    <button data-view="todo"><span>☑</span><b class="nav-label">Daily To-Do</b></button>
+    <button data-view="syllabus"><span>▤</span><b class="nav-label">Syllabus</b></button>
+    <button data-view="calendar"><span>▦</span><b class="nav-label">Calendar</b></button>
+    <button data-view="mocks"><span>♜</span><b class="nav-label">Mock Tests</b></button>
+    <button data-view="progress"><span>▥</span><b class="nav-label">Progress</b></button>
+    <button data-view="smart"><span>🧠</span><b class="nav-label">Smart Study</b></button>
+    <button data-view="mistakes"><span>✍️</span><b class="nav-label">Mistakes</b></button>
+    <button data-view="library"><span>📚</span><b class="nav-label">Notes & Quiz</b></button>
+    <button data-view="rewards"><span>🏆</span><b class="nav-label">Rewards</b></button>
+    <button data-view="settings"><span>⚙️</span><b class="nav-label">Settings</b></button>
+  </nav>
+  <div class="side-note">“Consistent effort today, confident success tomorrow.” ⭐</div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div><div class="eyebrow">Your exam-prep command centre</div><h1>November <em>Sprint</em></h1><div class="muted">Class 8 WBBSE • Exam starts 1 December 2026</div></div>
+  <div class="top-actions"><button class="btn" id="installBtn" hidden>＋ Install App</button><button class="btn" id="themeBtn" title="Switch theme">☀️ Theme</button><button class="btn" id="exportBtn">⇩ Backup</button><button class="btn primary" id="todayBtn">Today ↗</button></div>
+</header>
+<section class="view active" id="view-dashboard">
+  <div class="hero">
+    <div class="panel">
+      <div class="date-line"><div><span class="pill" id="phasePill">WEEK 1 · FOUNDATION</span><h2 id="dashDate" style="margin-top:12px">Thursday, 5 November 2026</h2></div><div class="countdown"><strong id="daysLeft">26</strong><span>DAYS TO EXAM</span></div></div>
+      <div class="daily-head"><h3>Today's mission</h3><select class="day-select" id="dashDateSelect" aria-label="Choose day"></select></div>
+      <div class="task-progress"><div class="ring" id="ring"><div class="ring-inner"><b id="ringNum">0/0</b><small>tasks done</small></div></div><div class="progress-copy"><strong id="progressText">Make today count.</strong><p id="progressHint">Small, focused sessions beat last-minute cramming.</p><div class="bar"><span id="dayBar"></span></div></div></div>
+      <div class="task-list" id="dashTasks"></div>
+      <div class="task-tools"><button class="btn primary" id="openTodo">☑ Open full to-do</button><button class="btn" id="clearDay">Reset this day</button></div>
+    </div>
+    <div class="right-stack">
+      <div class="panel"><div class="section-head"><h2>📊 Subject progress</h2><button class="btn" data-goto="progress">View all</button></div><div class="subject-grid" id="subjectMini"></div></div>
+      <div class="panel timer"><div class="section-head"><h2>⏱ Focus timer</h2><span class="pill">Pomodoro</span></div><div class="timer-face" id="timerFace"><div class="timer-content"><strong id="timerDisplay">25:00</strong><small id="timerLabel">Focus session</small></div></div><div class="timer-settings"><button class="btn" data-minutes="25">25 min</button><button class="btn" data-minutes="5">5 min break</button><button class="btn" data-minutes="15">15 min break</button></div><div class="timer-buttons"><button class="btn primary" id="timerStart">▶ Start</button><button class="btn" id="timerReset">↺ Reset</button></div><p class="muted" style="font-size:12px">Put your phone aside and focus on one task.</p></div>
+      <div class="panel"><div class="section-head"><h2>🏅 Next mock test</h2></div><div id="nextMock"></div></div>
+    </div>
+  </div>
+  <div class="two-col">
+    <div class="panel"><div class="section-head"><h2>🗓 November calendar</h2><span class="pill">5–30 Nov</span></div><div class="calendar-grid" id="calendarMini"></div></div>
+    <div class="panel"><div class="section-head"><h2>🎯 Study goals</h2></div><div class="quick-grid"><div class="quick"><strong>7</strong><span>Subjects</span></div><div class="quick"><strong>26</strong><span>Plan days</span></div><div class="quick"><strong>3h</strong><span>Daily target</span></div></div><div class="notice" style="margin-top:14px">Tip: Read → close the book → recall → write → check. Practise writing answers yourself every day.</div></div>
+  </div>
+</section>
+<section class="view" id="view-todo">
+  <div class="panel">
+    <div class="section-head"><div><div class="eyebrow">One day at a time</div><h2 style="margin-top:5px">Daily To-Do List</h2></div><span class="pill" id="todoCount">0 completed</span></div>
+    <div class="daily-head"><select class="day-select" id="todoDateSelect" aria-label="Choose date"></select><input class="search" id="taskSearch" placeholder="Search today's tasks…" style="max-width:340px;margin:0"></div>
+    <div class="task-progress"><div class="ring" id="todoRing"><div class="ring-inner"><b id="todoRingNum">0/0</b><small>tasks done</small></div></div><div class="progress-copy"><strong id="todoProgressText">Keep going!</strong><p>Tick a task when you have actually finished it.</p><div class="bar"><span id="todoBar"></span></div></div></div>
+    <div class="task-list" id="fullTasks"></div>
+    <div class="panel subpanel" style="margin-top:16px"><h3>＋ Add your own task</h3><div class="form-grid"><input id="newTaskText" class="search" placeholder="Task description" style="margin:0"><select id="newTaskPriority" class="day-select"><option>Normal</option><option>High</option><option>Low</option></select><input id="newTaskDue" type="date" class="day-select"><button class="btn primary" id="addTaskBtn">Add task</button></div><div id="customTaskList" class="task-list" style="margin-top:12px"></div></div>
+    <div class="task-tools"><button class="btn" id="uncheckDay">Uncheck all</button><button class="btn" id="carryTasks">↪ Carry unfinished to next day</button><button class="btn primary" id="printBtn">🖨 Print daily list</button></div>
+  </div>
+</section>
+<section class="view" id="view-syllabus">
+  <div class="panel"><div class="section-head"><div><div class="eyebrow">Track each subject</div><h2 style="margin-top:5px">Syllabus Tracker</h2></div><span class="pill" id="syllabusCount">0 topics checked</span></div><p class="muted">Tick a chapter only after you have studied it and tested your recall. The plan includes the topics supplied so far; add any missing school-prescribed chapters to your notebook.</p><div class="syllabus-list" id="syllabusList"></div></div>
+</section>
+<section class="view" id="view-calendar">
+  <div class="panel"><div class="section-head"><div><div class="eyebrow">26-day plan</div><h2 style="margin-top:5px">Calendar & Daily Targets</h2></div><span class="pill">November 2026</span></div><div class="calendar-grid" id="calendarFull"></div><div class="notice" style="margin-top:16px">Choose any date to open its tasks. Mock tests are planned for 20–26 November. Adjust if your school announces a different exam schedule.</div></div>
+</section>
+<section class="view" id="view-mocks">
+  <div class="panel"><div class="section-head"><div><div class="eyebrow">Exam practice</div><h2 style="margin-top:5px">Mock Test Schedule</h2></div><span class="pill">20–26 November</span></div><p class="muted">Use a full practice paper, follow its time limit, and correct every mistake afterwards.</p><div class="mock-list" id="mockList"></div><div class="notice" style="margin-top:16px">After each mock test, write down: (1) topic missed, (2) why you missed it, and (3) when you will practise it again.</div></div>
+</section>
+<section class="view" id="view-progress">
+  <div class="panel"><div class="section-head"><div><div class="eyebrow">Your effort, made visible</div><h2 style="margin-top:5px">Progress Report</h2></div><span class="pill" id="overallPill">0% complete</span></div><div class="quick-grid" style="margin-bottom:18px"><div class="quick"><strong id="allDone">0</strong><span>Tasks completed</span></div><div class="quick"><strong id="allTasks">0</strong><span>Total planned tasks</span></div><div class="quick"><strong id="activeDays">0</strong><span>Days with progress</span></div></div><div class="bar" style="height:12px;margin-bottom:20px"><span id="overallBar"></span></div><div class="subject-grid" id="subjectFull"></div><div class="task-tools" style="margin-top:18px"><button class="btn primary" id="exportBtn2">⇩ Download progress backup</button><button class="btn" id="importBtn">⇧ Restore backup</button><input type="file" id="importFile" accept="application/json" hidden></div></div>
+</section>
+<section class="view" id="view-smart"><div class="panel"><div class="section-head"><div><div class="eyebrow">Learn, revise, improve</div><h2>🧠 Smart Study Centre</h2></div><span class="pill">Spaced revision</span></div><p class="muted">Add a topic after studying it. The planner creates review dates for 1, 3 and 7 days later.</p><div class="form-grid"><input id="revisionTopic" class="search" placeholder="Topic / chapter name" style="margin:0"><select id="revisionSubject" class="day-select"></select><button class="btn primary" id="addRevision">Schedule revision</button></div><div id="revisionList" class="feature-list" style="margin-top:16px"></div><hr class="soft"><h3>🎯 Weak-topic detector</h3><p class="muted">Rate a topic honestly. Lower confidence topics appear first for extra practice.</p><div class="form-grid"><input id="weakTopic" class="search" placeholder="Topic you find difficult" style="margin:0"><select id="weakSubject" class="day-select"></select><select id="weakLevel" class="day-select"><option value="1">1 · Very difficult</option><option value="2">2 · Difficult</option><option value="3" selected>3 · Average</option><option value="4">4 · Good</option><option value="5">5 · Confident</option></select><button class="btn primary" id="addWeak">Save rating</button></div><div id="weakList" class="feature-list" style="margin-top:12px"></div><hr class="soft"><h3>📝 Answer-writing tracker</h3><div class="form-grid"><select id="answerSubject" class="day-select"></select><input id="answerCount" type="number" min="1" max="100" value="3" class="day-select"><button class="btn primary" id="logAnswers">Log answers written</button></div><div id="answerStats" class="quick-grid" style="margin-top:14px"></div></div></section>
+<section class="view" id="view-mistakes"><div class="panel"><div class="section-head"><div><div class="eyebrow">Learn from every error</div><h2>✍️ Mistake Notebook</h2></div><span class="pill" id="mistakeCount">0 entries</span></div><div class="form-grid"><select id="mistakeSubject" class="day-select"></select><input id="mistakeTopic" class="search" placeholder="Topic / question" style="margin:0"><input id="mistakeReason" class="search" placeholder="Why did I get it wrong?" style="margin:0"><input id="mistakeFix" class="search" placeholder="Correct idea / what to remember" style="margin:0"><button class="btn primary" id="addMistake">Save mistake</button></div><div id="mistakeList" class="feature-list" style="margin-top:16px"></div></div></section>
+<section class="view" id="view-library"><div class="panel"><div class="section-head"><div><div class="eyebrow">Your personal study library</div><h2>📚 Notes, Formulas & Quick Quiz</h2></div></div><div class="form-grid"><select id="noteSubject" class="day-select"></select><input id="noteTitle" class="search" placeholder="Note title" style="margin:0"><textarea id="noteBody" rows="4" placeholder="Write notes, formulas or key facts…"></textarea><button class="btn primary" id="saveNote">Save note</button></div><div id="notesList" class="feature-list" style="margin-top:16px"></div><hr class="soft"><h3>⚡ Quick recall quiz</h3><p class="muted">Create your own question and answer cards, then reveal the answer to test recall.</p><div class="form-grid"><input id="quizQuestion" class="search" placeholder="Question" style="margin:0"><input id="quizAnswer" class="search" placeholder="Answer" style="margin:0"><button class="btn primary" id="saveFlashcard">Add flashcard</button></div><div id="quizArea" class="feature-list" style="margin-top:14px"></div><button class="btn" id="nextQuiz" style="margin-top:10px">Next question ↗</button></div></section>
+<section class="view" id="view-rewards"><div class="panel"><div class="section-head"><div><div class="eyebrow">Consistency deserves recognition</div><h2>🏆 Motivation & Rewards</h2></div><span class="pill" id="levelPill">Level 1</span></div><div class="quick-grid"><div class="quick"><strong id="xpValue">0</strong><span>XP earned</span></div><div class="quick"><strong id="streakValue">0</strong><span>Day streak</span></div><div class="quick"><strong id="badgeValue">0</strong><span>Badges unlocked</span></div></div><div class="bar" style="height:12px;margin:16px 0"><span id="xpBar"></span></div><p class="muted" id="levelText">Complete tasks to earn XP. Every checked task gives 10 XP.</p><h3>🎖 Your badges</h3><div id="badges" class="badge-grid"></div><div class="notice" style="margin-top:16px">Rewards celebrate consistency—not perfection. A missed day is simply a chance to restart.</div></div></section>
+<section class="view" id="view-settings"><div class="panel"><div class="section-head"><div><div class="eyebrow">Your data, your device</div><h2>⚙️ App Settings & Backup</h2></div><span class="pill" id="saveStatus">● Auto-save on</span></div><p class="muted">Your planner saves automatically in this browser using local storage. Use backup regularly if you clear browser data or change devices.</p><div class="task-tools"><button class="btn primary" id="settingsExport">⇩ Export full backup</button><button class="btn" id="settingsImport">⇧ Import backup</button><button class="btn" id="requestNotify">🔔 Enable reminders</button><button class="btn" id="installBtn2">＋ Install app</button></div><div class="notice" style="margin-top:16px">Install note: on Android Chrome, open this planner from a secure website (HTTPS), then use the browser menu → “Install app” or “Add to Home screen”. The install button appears when supported. A downloaded HTML file can still be used in your browser, but offline app installation needs HTTPS hosting or localhost.</div><p class="muted" id="storageInfo" style="margin-top:16px"></p><button class="btn" id="resetAll" style="border-color:#a64b60;color:#ffb8c5">Reset all planner data</button></div></section>
+<footer class="footer">Made for your November study sprint • Your progress is saved in this browser on this device.</footer>
+</main>
+</div>
+<script>
+const plan = [
+["2026-11-05","Thursday","Week 1 · Foundation",[
+["Mathematics","Selected Chapter 1 — understand concepts and solve exercise questions"],
+["Geography","Chapter 3 — শিলা"],
+["English","Story 1 — read, understand and recall the main events"],
+["English","Practise 5 grammar questions"],
+["Answer writing","Write 3 answers from memory"]
+]],
+["2026-11-06","Friday","Week 1 · Foundation",[
+["Science","Chapter 1.4 — আলো"],
+["History","Chapter 2 — আঞ্চলিক শক্তির উত্থান"],
+["Bengali","জেলখানা চিঠি — read and prepare short answers"],
+["Mathematics","Solve 5 sums and correct mistakes"]
+]],
+["2026-11-07","Saturday","Week 1 · Foundation",[
+["Geography","Chapter 4 — চাপ বলয় ও বায়ু প্রবাহ"],
+["Mathematics","Selected Chapter 2 — worked examples and exercises"],
+["Sanskrit","Vocabulary and translation practice"],
+["Revision","Revise topics studied on 5–6 November"]
+]],
+["2026-11-08","Sunday","Week 1 · Foundation",[
+["Science","Chapter 2.2 — পদার্থের গঠন"],
+["History","Chapter 3 — উপনিবেশিক কৃতিত্ব প্রতিষ্ঠা (check the exact title in your book)"],
+["English","Story 2 — summary, characters and questions"],
+["Bengali","আদাব — read and prepare answers"]
+]],
+["2026-11-09","Monday","Week 1 · Foundation",[
+["Geography","Chapter 5 — মেঘ বৃষ্টি"],
+["Mathematics","Selected Chapter 3 — concepts and exercises"],
+["Bengali","স্বাধীনতা — central idea and short answers"],
+["Answer writing","Write 3 Bengali answers independently"]
+]],
+["2026-11-10","Tuesday","Week 1 · Foundation",[
+["Science","Chapter 3 — কয়েকটি গ্যাসের পরিচিতি"],
+["History","Chapter 4 — উপনিবেশিক অর্থনৈতিক চরিত্র"],
+["English","Poem — meaning, central idea and questions"],
+["Mathematics","Solve 5–8 sums"]
+]],
+["2026-11-11","Wednesday","Week 1 · Foundation",[
+["Science","Chapter 4 — প্রকৃতিতে ও জীবজগতে বিভিন্ন রূপে কার্বন যৌগের অবস্থান"],
+["Geography","Chapter 6 — জলবায়ু অঞ্চল"],
+["Bengali","শিকল পড়ার গান — read and prepare answers"],
+["Revision","Review topics from 5–10 November"]
+]],
+["2026-11-12","Thursday","Week 2 · Syllabus completion",[
+["History","Chapter 5 — উপনিবেশিক শাসনের প্রতিক্রিয়া: সহযোগিতা ও বিদ্রোহ"],
+["Mathematics","Selected Chapter 4 — exercises"],
+["English","Story 3 — summary and textbook questions"],
+["Bengali","হরিচরণ বন্দ্যোপাধ্যায়"]
+]],
+["2026-11-13","Friday","Week 2 · Syllabus completion",[
+["Science","Chapter 6 — জীবদেহের গঠন"],
+["Geography","Chapter 7 — মানুষের কার্যাবলী ও পরিবেশের অবনমন"],
+["Bengali","ঘুরে দাঁড়াও"],
+["Mathematics","Revise formulas and redo difficult sums"]
+]],
+["2026-11-14","Saturday","Week 2 · Syllabus completion",[
+["History","Chapter 6 — জাতীয়তাবাদের প্রাথমিক বিকাশ"],
+["Mathematics","Selected Chapter 5 — exercises"],
+["Sanskrit","Grammar practice"],
+["Science","Revise Chapters 1.1, 1.4, 2.2 and 3"]
+]],
+["2026-11-15","Sunday","Week 2 · Syllabus completion",[
+["Science","Chapter 7 — অনুজীবদের জগত"],
+["Geography","Chapter 9 — উত্তর আমেরিকা"],
+["Bengali","সুভা"],
+["English","Revise the poem and practise questions"]
+]],
+["2026-11-16","Monday","Week 2 · Syllabus completion",[
+["History","Chapter 7 — ভারতের জাতীয় আন্দোলনে আদর্শ ও বিবরণ"],
+["Mathematics","Selected Chapter 6 — exercises"],
+["English","Paragraph writing — plan, write and check"],
+["Bengali","Grammar — সমাস"]
+]],
+["2026-11-17","Tuesday","Week 2 · Syllabus completion",[
+["Science","Chapter 9 — অন্তঃক্ষরা গ্রন্থি ও বয়ঃসন্ধি"],
+["Geography","Chapter 11 — ওশিয়ানিয়া"],
+["Bengali","পরাজয়"],
+["Sanskrit","Translation practice"]
+]],
+["2026-11-18","Wednesday","Week 2 · Syllabus completion",[
+["History","Chapter 8 — সাম্প্রদায়িকতা থেকে দেশভাগ"],
+["Mathematics","Selected Chapter 7 — exercises"],
+["Bengali","মাসি পিসি"],
+["English","Revise Story 1–3"]
+]],
+["2026-11-19","Thursday","Finish syllabus",[
+["History","Chapter 9 — ভারতের সংবিধান: গণতন্ত্রের কাঠামো, জনগণের অধিকার"],
+["Science","Chapter 10 — জীব বৈচিত্র, পরিবেশের সংকট ও বিপন্ন প্রাণী সংরক্ষণ"],
+["Science","Chapter 11 — আমাদের চারিপাশের পরিবেশ ও জীবজগৎ"],
+["Bengali","টিকিটের এ্যালবাম"],
+["Bengali","লোকটা জানলেই না"],
+["Audit","List any unfinished or missing syllabus topics"]
+]],
+["2026-11-20","Friday","Mock test week",[
+["Mathematics","Take a timed full practice paper"],
+["Mathematics","Check every answer and redo incorrect sums"],
+["Review","Write down 3 weak topics to revise"]
+]],
+["2026-11-21","Saturday","Mock test week",[
+["Science","Revise all prescribed Science units"],
+["Science","Practise diagrams, definitions and differences"],
+["Science","Take a timed practice paper and correct it"]
+]],
+["2026-11-22","Sunday","Mock test week",[
+["History","Revise Chapters 2–9"],
+["History","Practise dates, causes and consequences"],
+["History","Take a timed practice paper and correct it"]
+]],
+["2026-11-23","Monday","Mock test week",[
+["Geography","Revise all 7 selected chapters"],
+["Geography","Practise prescribed maps and diagrams"],
+["Geography","Take a timed practice paper and correct it"]
+]],
+["2026-11-24","Tuesday","Mock test week",[
+["Bengali","Revise all 11 lessons and grammar"],
+["Bengali","Practise letter and essay writing"],
+["Bengali","Take a timed practice paper and correct it"]
+]],
+["2026-11-25","Wednesday","Mock test week",[
+["English","Revise all 4 lessons and grammar"],
+["English","Practise the 5 prescribed writing skills"],
+["English","Take a timed practice paper and correct it"]
+]],
+["2026-11-26","Thursday","Mock test week",[
+["Sanskrit","Revise prescribed lessons and vocabulary"],
+["Sanskrit","Practise grammar and translation"],
+["Sanskrit","Take a timed practice paper and correct it"]
+]],
+["2026-11-27","Friday","Final revision",[
+["Mathematics","Revise formulas and redo difficult sums"],
+["Science","Revise definitions, diagrams and differences"],
+["Mistakes","Correct mistakes from all mock tests"]
+]],
+["2026-11-28","Saturday","Final revision",[
+["History","Revise key questions from Chapters 2–9"],
+["Geography","Revise all 7 chapters, maps and diagrams where prescribed"],
+["Answer writing","Practise short and long answers"]
+]],
+["2026-11-29","Sunday","Final revision",[
+["Bengali","Revise lessons, grammar and writing formats"],
+["English","Revise lessons, grammar and writing formats"],
+["Sanskrit","Revise grammar, vocabulary and translation"],
+["Mistakes","Review language mock-test mistakes"]
+]],
+["2026-11-30","Monday","Exam eve · Light revision",[
+["Mathematics","Review formulas and familiar examples only"],
+["Science","Review important definitions and diagrams"],
+["History & Geography","Review short notes and key facts"],
+["Languages","Review key points, grammar and writing formats"],
+["Exam prep","Pack pens, pencils, eraser and required materials"],
+["Rest","Finish early and sleep by 10 PM"]
+]]
+];
+const subjects = [
+{name:"Bengali",label:"বাংলা",icon:"📕",total:11},
+{name:"English",label:"English",icon:"📘",total:4},
+{name:"Mathematics",label:"Mathematics",icon:"🧮",total:15},
+{name:"Science",label:"Science",icon:"🧪",total:10},
+{name:"Sanskrit",label:"Sanskrit",icon:"📜",total:5},
+{name:"History",label:"History",icon:"🏛️",total:8},
+{name:"Geography",label:"Geography",icon:"🌍",total:7}
+];
+const mocks=[
+["2026-11-20","Mathematics","Formulas, worked steps and timed problem solving"],
+["2026-11-21","Science","Definitions, diagrams, differences and concepts"],
+["2026-11-22","History","Chronology, causes, consequences and long answers"],
+["2026-11-23","Geography","Maps, definitions, diagrams and chapter questions"],
+["2026-11-24","Bengali","Textbook lessons, grammar and writing"],
+["2026-11-25","English","Lessons, grammar and writing skills"],
+["2026-11-26","Sanskrit","Vocabulary, grammar and translation"]
+];
+const allTopics=[
+["Bengali","জেলখানা চিঠি"],["Bengali","আদাব"],["Bengali","স্বাধীনতা"],["Bengali","শিকল পড়ার গান"],["Bengali","হরিচরণ বন্দ্যোপাধ্যায়"],["Bengali","ঘুরে দাঁড়াও"],["Bengali","সুভা"],["Bengali","পরাজয়"],["Bengali","মাসি পিসি"],["Bengali","টিকিটের এ্যালবাম"],["Bengali","লোকটা জানলেই না"],
+["English","Story 1"],["English","Story 2"],["English","Story 3"],["English","Poem"],
+["Mathematics","Selected Chapter 1"],["Mathematics","Selected Chapter 2"],["Mathematics","Selected Chapter 3"],["Mathematics","Selected Chapter 4"],["Mathematics","Selected Chapter 5"],["Mathematics","Selected Chapter 6"],["Mathematics","Selected Chapter 7"],["Mathematics","Remaining selected chapters — add exact titles"],
+["Science","1.1 বল ও চাপ"],["Science","1.4 আলো"],["Science","2.2 পদার্থের গঠন"],["Science","3 কয়েকটি গ্যাসের পরিচিতি"],["Science","4 কার্বন যৌগ"],["Science","6 জীবদেহের গঠন"],["Science","7 অনুজীবদের জগত"],["Science","9 অন্তঃক্ষরা গ্রন্থি ও বয়ঃসন্ধি"],["Science","10 জীব বৈচিত্র ও পরিবেশ সংরক্ষণ"],["Science","11 পরিবেশ ও জীবজগৎ"],
+["Sanskrit","Prescribed lessons — add exact chapter titles"],["Sanskrit","Grammar"],["Sanskrit","Vocabulary"],["Sanskrit","Translation"],["Sanskrit","Writing practice"],
+["History","Chapter 2 — আঞ্চলিক শক্তির উত্থান"],["History","Chapter 3 — উপনিবেশিক কর্তৃত্ব/কৃতিত্ব প্রতিষ্ঠা (verify title)"],["History","Chapter 4 — উপনিবেশিক অর্থনৈতিক চরিত্র"],["History","Chapter 5 — সহযোগিতা ও বিদ্রোহ"],["History","Chapter 6 — জাতীয়তাবাদের প্রাথমিক বিকাশ"],["History","Chapter 7 — জাতীয় আন্দোলনে আদর্শ ও বিবরণ"],["History","Chapter 8 — সাম্প্রদায়িকতা থেকে দেশভাগ"],["History","Chapter 9 — ভারতের সংবিধান"],
+["Geography","Chapter 3 — শিলা"],["Geography","Chapter 4 — চাপ বলয় ও বায়ু প্রবাহ"],["Geography","Chapter 5 — মেঘ বৃষ্টি"],["Geography","Chapter 6 — জলবায়ু অঞ্চল"],["Geography","Chapter 7 — পরিবেশের অবনমন"],["Geography","Chapter 9 — উত্তর আমেরিকা"],["Geography","Chapter 11 — ওশিয়ানিয়া"]
+];
+const STORAGE="novemberSprintClass8_v1";
+let state={checks:{},syllabus:{},theme:"dark",customTasks:{},revisions:[],weakTopics:[],mistakes:[],notes:[],flashcards:[],answerLogs:[],xp:0,earned:{},createdAt:new Date().toISOString()};
+try{const saved=JSON.parse(localStorage.getItem(STORAGE)||"{}");state={...state,...saved,checks:saved.checks||{},syllabus:saved.syllabus||{},customTasks:saved.customTasks||{},revisions:saved.revisions||[],weakTopics:saved.weakTopics||[],mistakes:saved.mistakes||[],notes:saved.notes||[],flashcards:saved.flashcards||[],answerLogs:saved.answerLogs||[],earned:saved.earned||{}}}catch(e){}
+let selectedDate="2026-11-05", timerSeconds=25*60,timerInitial=25*60,timerHandle=null,timerRunning=false;
+const $=id=>document.getElementById(id);
+function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(state))}catch(e){}}
+function getDay(date){return plan.find(x=>x[0]===date)||plan[0]}
+function dayTasks(date){const d=getDay(date);return d[3].map((x,i)=>({id:date+"_"+i,subject:x[0],text:x[1]}))}
+function isDone(id){return !!state.checks[id]}
+function toggleTask(id,checked){state.checks[id]=checked;persist();renderAll()}
+function niceDate(date,withYear=true){const d=new Date(date+"T12:00:00");return d.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",...(withYear?{year:"numeric"}:{})})}
+function phaseFor(date){return getDay(date)[2]}
+function allTaskRows(){return [...plan.flatMap(d=>dayTasks(d[0])),...Object.entries(state.customTasks||{}).flatMap(([date,items])=>items.map(t=>({id:date+"_custom_"+t.id,subject:"Personal task",text:t.text,done:!!t.done})))]}
+function pct(n,total){return total?Math.round(n/total*100):0}
+function setRing(ringId,numId,n,total){$(ringId).style.setProperty("--p",pct(n,total)+"%");$(numId).textContent=n+"/"+total}
+function taskHTML(task){const done=isDone(task.id);return `<label class="task ${done?"done":""}"><input type="checkbox" data-task="${task.id}" ${done?"checked":""}><span><span class="task-title">${escapeHTML(task.text)}</span><br><span class="tag">${escapeHTML(task.subject)}</span></span></label>`}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function fillDateSelects(){["dashDateSelect","todoDateSelect"].forEach(id=>{$(id).innerHTML=plan.map(d=>`<option value="${d[0]}">${d[0].slice(8)} Nov · ${d[1]}</option>`).join("");$(id).value=selectedDate})}
+function renderDay(){
+ const d=getDay(selectedDate),tasks=dayTasks(selectedDate),done=tasks.filter(t=>isDone(t.id)).length;
+ $("dashDate").textContent=niceDate(selectedDate);$("phasePill").textContent=d[2].toUpperCase();$("dashDateSelect").value=selectedDate;
+ $("dashTasks").innerHTML=tasks.slice(0,5).map(taskHTML).join("");
+ setRing("ring","ringNum",done,tasks.length);$("dayBar").style.width=pct(done,tasks.length)+"%";
+ $("progressText").textContent=done===tasks.length?"Mission complete! 🎉":done===0?"Make today count.":`${tasks.length-done} task${tasks.length-done===1?"":"s"} left today`;
+ $("progressHint").textContent=done===tasks.length?"Great work. Review your mistakes before finishing.":"Tick tasks only after you finish them.";
+ $("todoDateSelect").value=selectedDate;renderFullTasks();renderCalendar();
+}
+function renderFullTasks(){const tasks=dayTasks(selectedDate),q=($("taskSearch").value||"").toLowerCase(),filtered=tasks.filter(t=>(t.text+" "+t.subject).toLowerCase().includes(q)),done=tasks.filter(t=>isDone(t.id)).length;
+ $("fullTasks").innerHTML=filtered.length?filtered.map(taskHTML).join(""):'<p class="muted">No tasks match your search.</p>';
+ $("todoCount").textContent=`${done} / ${tasks.length} completed`;setRing("todoRing","todoRingNum",done,tasks.length);$("todoBar").style.width=pct(done,tasks.length)+"%";$("todoProgressText").textContent=done===tasks.length?"Day complete! 🎉":`${pct(done,tasks.length)}% complete`;
+}
+function subjectStats(name){const rows=allTaskRows().filter(t=>t.subject===name),done=rows.filter(t=>isDone(t.id)).length;return {done,total:rows.length,p:pct(done,rows.length)}}
+function renderSubjects(){const make=(full=false)=>subjects.map(s=>{const st=subjectStats(s.name);return `<div class="subject"><div class="subject-top"><span class="subject-name">${s.icon} ${s.label}</span><span class="muted">${st.p}%</span></div><small>${st.done} / ${st.total} planned tasks completed</small><div class="bar"><span style="width:${st.p}%;background:${s.name==="Mathematics"?"var(--green)":"linear-gradient(90deg,var(--blue),var(--cyan))"}"></span></div></div>`}).join("");
+ $("subjectMini").innerHTML=make();$("subjectFull").innerHTML=make();
+}
+function renderCalendar(){const build=id=>{let out=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(x=>`<div class="weekday">${x}</div>`).join("");for(let day=1;day<=30;day++){const date=`2026-11-${String(day).padStart(2,"0")}`,d=getDay(date),exists=!!d&&date>="2026-11-05",taskCount=exists?dayTasks(date).length:0,done=exists?dayTasks(date).filter(t=>isDone(t.id)).length:0;out+=`<button class="cal-day ${date===selectedDate?"selected":""} ${exists?"has-tasks":""}" ${exists?`data-date="${date}"`:"disabled"} style="${exists?"":"opacity:.28"}">${day}${exists?`<small>${done}/${taskCount}</small>`:""}</button>`}$(id).innerHTML=out};
+ build("calendarMini");build("calendarFull");
+}
+function renderMocks(){const next=mocks.find(m=>m[0]>=selectedDate)||mocks[mocks.length-1];$("nextMock").innerHTML=`<div class="mock"><div><strong>${next[1]} Mock Test</strong><small>${next[2]}</small></div><span class="date">${Number(next[0].slice(8))} Nov</span></div>`;$("mockList").innerHTML=mocks.map(m=>`<div class="mock"><div><strong>${m[1]} Mock Test</strong><small>${m[2]}</small></div><span class="date">${Number(m[0].slice(8))} Nov</span></div>`).join("")}
+function renderSyllabus(){const grouped={};allTopics.forEach((t,i)=>{(grouped[t[0]]??=[]).push({...{subject:t[0],text:t[1],id:"syll_"+i}})});let html="";Object.entries(grouped).forEach(([subject,topics])=>{html+=`<h3 style="margin:16px 0 4px">${escapeHTML(subject)}</h3>`+topics.map(t=>`<label class="syllabus-row"><input type="checkbox" data-syllabus="${t.id}" ${state.syllabus[t.id]?"checked":""}><span>${escapeHTML(t.text)}</span><small>${state.syllabus[t.id]?"Completed":"Not checked"}</small></label>`).join("")});$("syllabusList").innerHTML=html;const total=allTopics.length,done=Object.values(state.syllabus).filter(Boolean).length;$("syllabusCount").textContent=`${done} / ${total} topics checked`}
+function renderProgress(){const rows=allTaskRows(),done=rows.filter(t=>t.done||isDone(t.id)).length,days=new Set(rows.filter(t=>t.done||isDone(t.id)).map(t=>t.id.slice(0,10)));$("allDone").textContent=done;$("allTasks").textContent=rows.length;$("activeDays").textContent=days.size;$("overallPill").textContent=pct(done,rows.length)+"% complete";$("overallBar").style.width=pct(done,rows.length)+"%"}
+function updateCountdown(){const today=new Date();const exam=new Date("2026-12-01T00:00:00");const now=new Date(today.getFullYear(),today.getMonth(),today.getDate());$("daysLeft").textContent=Math.max(0,Math.ceil((exam-now)/86400000))}
+function renderAll(){renderDay();renderSubjects();renderMocks();renderSyllabus();renderProgress();persist()}
+function setDate(date){if(!plan.some(d=>d[0]===date))return;selectedDate=date;fillDateSelects();renderDay()}
+function showView(name){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id==="view-"+name));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===name));window.scrollTo({top:0,behavior:"smooth"})}
+document.addEventListener("click",e=>{const task=e.target.closest("[data-task]");if(task){toggleTask(task.dataset.task,e.target.checked);return}const sy=e.target.closest("[data-syllabus]");if(sy){state.syllabus[sy.dataset.syllabus]=e.target.checked;persist();renderSyllabus();return}const dt=e.target.closest("[data-date]");if(dt){setDate(dt.dataset.date);showView("todo");return}const nav=e.target.closest("[data-view]");if(nav){showView(nav.dataset.view);return}const goto=e.target.closest("[data-goto]");if(goto){showView(goto.dataset.goto);return}const mins=e.target.closest("[data-minutes]");if(mins){setTimer(Number(mins.dataset.minutes));return}});
+$("dashDateSelect").addEventListener("change",e=>setDate(e.target.value));$("todoDateSelect").addEventListener("change",e=>setDate(e.target.value));$("taskSearch").addEventListener("input",renderFullTasks);
+$("todayBtn").addEventListener("click",()=>{const iso=new Date().toISOString().slice(0,10);setDate(plan.some(d=>d[0]===iso)?iso:"2026-11-05");showView("dashboard")});
+$("openTodo").addEventListener("click",()=>showView("todo"));
+$("clearDay").addEventListener("click",()=>{if(confirm("Reset all checkmarks for this day?")){dayTasks(selectedDate).forEach(t=>delete state.checks[t.id]);renderAll()}});
+$("uncheckDay").addEventListener("click",()=>{dayTasks(selectedDate).forEach(t=>delete state.checks[t.id]);renderAll()});
+$("printBtn").addEventListener("click",()=>window.print());
+$("themeBtn").addEventListener("click",()=>{state.theme=state.theme==="light"?"dark":"light";document.body.classList.toggle("light",state.theme==="light");$("themeBtn").textContent=state.theme==="light"?"🌙 Theme":"☀️ Theme";persist()});
+function exportData(){const blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),state},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="november-sprint-backup.json";a.click();URL.revokeObjectURL(url)}
+$("exportBtn").addEventListener("click",exportData);$("exportBtn2").addEventListener("click",exportData);$("importBtn").addEventListener("click",()=>$("importFile").click());
+$("importFile").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(!data.state||!data.state.checks)throw Error("Invalid backup");state={...state,...data.state};renderAll();document.body.classList.toggle("light",state.theme==="light");alert("Progress restored successfully.")}catch(err){alert("Could not read that backup file.")}e.target.value=""});
+function setTimer(minutes){pauseTimer();timerSeconds=minutes*60;timerInitial=timerSeconds;renderTimer()}
+function renderTimer(){const m=String(Math.floor(timerSeconds/60)).padStart(2,"0"),s=String(timerSeconds%60).padStart(2,"0");$("timerDisplay").textContent=m+":"+s;$("timerFace").style.background=`conic-gradient(var(--cyan) ${360*(1-timerSeconds/timerInitial)}deg,#18345e 0deg)`;$("timerStart").textContent=timerRunning?"⏸ Pause":"▶ Start"}
+function pauseTimer(){if(timerHandle)clearInterval(timerHandle);timerHandle=null;timerRunning=false;renderTimer()}
+$("timerStart").addEventListener("click",()=>{if(timerRunning){pauseTimer();return}timerRunning=true;renderTimer();timerHandle=setInterval(()=>{timerSeconds--;if(timerSeconds<=0){timerSeconds=0;pauseTimer();$("timerLabel").textContent="Session complete!";try{if("Notification"in window&&Notification.permission==="granted")new Notification("Focus session complete",{body:"Take a short break and review your progress."})}catch(e){} }renderTimer()},1000)});
+$("timerReset").addEventListener("click",()=>{pauseTimer();timerSeconds=timerInitial;renderTimer();$("timerLabel").textContent="Focus session"});
+if(state.theme==="light"){document.body.classList.add("light");$("themeBtn").textContent="🌙 Theme"}
+fillDateSelects();renderAll();updateCountdown();renderTimer();
+
+// Extended planner: all user-created content is persisted in localStorage.
+const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+function saveNow(){persist();const el=$('saveStatus');if(el)el.textContent='● Saved automatically';}
+function customFor(date){return state.customTasks[date]||[]}
+function renderCustomTasks(){const host=$('customTaskList');if(!host)return;const rows=customFor(selectedDate);host.innerHTML=rows.length?rows.map(t=>`<div class="feature-item"><div><strong>${escapeHTML(t.text)}</strong><div class="custom-meta">${escapeHTML(t.priority)} priority${t.due?' · Due '+escapeHTML(t.due):''} ${t.done?' · Completed':''}</div></div><div><button class="btn" data-custom-toggle="${t.id}">${t.done?'Undo':'Done'}</button> <button class="btn" data-custom-edit="${t.id}">Edit</button> <button class="btn" data-custom-delete="${t.id}">Delete</button></div></div>`).join(''):'<p class="muted">No personal tasks added for this day yet.</p>'}
+function addCustomTask(){const text=$('newTaskText').value.trim();if(!text){alert('Enter a task first.');return}const arr=customFor(selectedDate);arr.push({id:uid(),text,priority:$('newTaskPriority').value,due:$('newTaskDue').value,done:false});state.customTasks[selectedDate]=arr;$('newTaskText').value='';$('newTaskDue').value='';saveNow();renderCustomTasks()}
+$('addTaskBtn').addEventListener('click',addCustomTask);
+$('carryTasks').addEventListener('click',()=>{const idx=plan.findIndex(d=>d[0]===selectedDate);if(idx<0||idx===plan.length-1){alert('There is no later planner date available.');return}const next=plan[idx+1][0],unfinished=[...dayTasks(selectedDate).filter(t=>!isDone(t.id)).map(t=>t.text),...customFor(selectedDate).filter(t=>!t.done).map(t=>t.text)];if(!unfinished.length){alert('All tasks are complete for this day.');return}state.customTasks[next]=state.customTasks[next]||[];let added=0;unfinished.forEach(text=>{if(!state.customTasks[next].some(t=>t.text===text)){state.customTasks[next].push({id:uid(),text,priority:'High',due:'',done:false});added++}});saveNow();alert(`${added} unfinished task(s) carried to ${niceDate(next)}.`);setDate(next)});
+document.addEventListener('click',e=>{const tog=e.target.closest('[data-custom-toggle]');if(tog){const t=customFor(selectedDate).find(x=>x.id===tog.dataset.customToggle);if(t){t.done=!t.done;if(t.done)gainXP(10,'custom-'+t.id);saveNow();renderCustomTasks();renderRewards()}return}const del=e.target.closest('[data-custom-delete]');if(del){state.customTasks[selectedDate]=customFor(selectedDate).filter(x=>x.id!==del.dataset.customDelete);saveNow();renderCustomTasks();return}const edit=e.target.closest('[data-custom-edit]');if(edit){const t=customFor(selectedDate).find(x=>x.id===edit.dataset.customEdit);if(t){const v=prompt('Edit task',t.text);if(v&&v.trim())t.text=v.trim();saveNow();renderCustomTasks()}return}});
+const subjectOptions=subjects.map(x=>`<option value="${x.name}">${x.label}</option>`).join('');['revisionSubject','weakSubject','answerSubject','mistakeSubject','noteSubject'].forEach(id=>{if($(id))$(id).innerHTML=subjectOptions});
+function addRevision(){const topic=$('revisionTopic').value.trim();if(!topic)return alert('Enter a topic.');const base=new Date(todayISO()+'T12:00:00');const dates=[1,3,7].map(n=>{const d=new Date(base);d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)});state.revisions.push({id:uid(),topic,subject:$('revisionSubject').value,created:todayISO(),dates,done:[]});$('revisionTopic').value='';saveNow();renderSmart()}
+function renderSmart(){if(!$('revisionList'))return;$('revisionList').innerHTML=state.revisions.length?state.revisions.map(r=>`<div class="feature-item"><div><strong>${escapeHTML(r.topic)} · ${escapeHTML(r.subject)}</strong><p>Review dates: ${r.dates.map((d,i)=>`${d} ${r.done.includes(i)?'✓':''}`).join(' · ')}</p></div><div>${r.dates.map((d,i)=>`<button class="btn" data-revision="${r.id}" data-step="${i}">${r.done.includes(i)?'✓':'Mark done'}</button>`).join(' ')} <button class="btn" data-revision-delete="${r.id}">×</button></div></div>`).join(''):'<p class="muted">No revision sessions yet.</p>';
+const weak=[...state.weakTopics].sort((a,b)=>a.level-b.level);$('weakList').innerHTML=weak.length?weak.map(w=>`<div class="feature-item"><div><strong>${escapeHTML(w.topic)} · ${escapeHTML(w.subject)}</strong><p>Confidence: ${w.level}/5</p></div><button class="btn" data-weak-delete="${w.id}">Remove</button></div>`).join(''):'<p class="muted">Add topics and confidence ratings to identify what needs more practice.</p>';
+const total=state.answerLogs.reduce((n,x)=>n+x.count,0);$('answerStats').innerHTML=`<div class="quick"><strong>${total}</strong><span>Answers written</span></div><div class="quick"><strong>${state.answerLogs.length}</strong><span>Practice sessions</span></div>`;}
+$('addRevision').addEventListener('click',addRevision);$('addWeak').addEventListener('click',()=>{const topic=$('weakTopic').value.trim();if(!topic)return alert('Enter a topic.');state.weakTopics.push({id:uid(),topic,subject:$('weakSubject').value,level:Number($('weakLevel').value)});$('weakTopic').value='';saveNow();renderSmart()});$('logAnswers').addEventListener('click',()=>{const count=Math.max(1,Math.min(100,Number($('answerCount').value)||1));state.answerLogs.push({subject:$('answerSubject').value,count,date:todayISO()});gainXP(count*2,'answers-'+uid());saveNow();renderSmart();renderRewards()});
+document.addEventListener('click',e=>{const r=e.target.closest('[data-revision]');if(r){const x=state.revisions.find(v=>v.id===r.dataset.revision),i=Number(r.dataset.step);if(x&&!x.done.includes(i)){x.done.push(i);gainXP(5,'revision-'+x.id+'-'+i)}saveNow();renderSmart();renderRewards()}const rd=e.target.closest('[data-revision-delete]');if(rd){state.revisions=state.revisions.filter(x=>x.id!==rd.dataset.revisionDelete);saveNow();renderSmart()}const wd=e.target.closest('[data-weak-delete]');if(wd){state.weakTopics=state.weakTopics.filter(x=>x.id!==wd.dataset.weakDelete);saveNow();renderSmart()}});
+function renderMistakes(){if(!$('mistakeList'))return;$('mistakeCount').textContent=state.mistakes.length+' entries';$('mistakeList').innerHTML=state.mistakes.length?state.mistakes.map(m=>`<div class="feature-item"><div><strong>${escapeHTML(m.subject)} · ${escapeHTML(m.topic)}</strong><p><b>Reason:</b> ${escapeHTML(m.reason)}<br><b>Correction:</b> ${escapeHTML(m.fix)}<br><small>${m.date}</small></p></div><button class="btn" data-mistake-delete="${m.id}">Delete</button></div>`).join(''):'<p class="muted">Your saved mistakes will appear here.</p>'}
+$('addMistake').addEventListener('click',()=>{const topic=$('mistakeTopic').value.trim(),reason=$('mistakeReason').value.trim(),fix=$('mistakeFix').value.trim();if(!topic||!reason||!fix)return alert('Fill in the topic, reason and correction.');state.mistakes.unshift({id:uid(),subject:$('mistakeSubject').value,topic,reason,fix,date:todayISO()});['mistakeTopic','mistakeReason','mistakeFix'].forEach(id=>$(id).value='');gainXP(5,'mistake-'+uid());saveNow();renderMistakes();renderRewards()});document.addEventListener('click',e=>{const b=e.target.closest('[data-mistake-delete]');if(b){state.mistakes=state.mistakes.filter(x=>x.id!==b.dataset.mistakeDelete);saveNow();renderMistakes()}});
+function renderLibrary(){if(!$('notesList'))return;$('notesList').innerHTML=state.notes.length?state.notes.map(n=>`<div class="feature-item"><div><strong>${escapeHTML(n.title)} · ${escapeHTML(n.subject)}</strong><p>${escapeHTML(n.body)}</p></div><button class="btn" data-note-delete="${n.id}">Delete</button></div>`).join(''):'<p class="muted">No notes saved yet.</p>';renderQuiz()}
+$('saveNote').addEventListener('click',()=>{const title=$('noteTitle').value.trim(),body=$('noteBody').value.trim();if(!title||!body)return alert('Add a title and note.');state.notes.unshift({id:uid(),subject:$('noteSubject').value,title,body});$('noteTitle').value='';$('noteBody').value='';saveNow();renderLibrary()});document.addEventListener('click',e=>{const b=e.target.closest('[data-note-delete]');if(b){state.notes=state.notes.filter(x=>x.id!==b.dataset.noteDelete);saveNow();renderLibrary()}});
+$('saveFlashcard').addEventListener('click',()=>{const q=$('quizQuestion').value.trim(),a=$('quizAnswer').value.trim();if(!q||!a)return alert('Enter both question and answer.');state.flashcards.push({id:uid(),q,a});$('quizQuestion').value='';$('quizAnswer').value='';saveNow();renderQuiz()});let quizIndex=0;function renderQuiz(){const host=$('quizArea');if(!host)return;if(!state.flashcards.length){host.innerHTML='<p class="muted">No flashcards yet. Add your first recall question above.</p>';return}quizIndex=quizIndex%state.flashcards.length;const c=state.flashcards[quizIndex];host.innerHTML=`<div class="feature-item" style="display:block"><strong>Card ${quizIndex+1}/${state.flashcards.length}: ${escapeHTML(c.q)}</strong><p id="quizAnswerText" hidden>${escapeHTML(c.a)}</p><button class="btn primary" id="revealAnswer">Reveal answer</button> <button class="btn" data-card-delete="${c.id}">Delete card</button></div>`;$('revealAnswer').onclick=()=>{$('quizAnswerText').hidden=false;$('revealAnswer').textContent='Answer revealed';gainXP(1,'quiz-'+c.id+'-'+Date.now());saveNow();renderRewards()}}
+$('nextQuiz').addEventListener('click',()=>{quizIndex++;renderQuiz()});document.addEventListener('click',e=>{const b=e.target.closest('[data-card-delete]');if(b){state.flashcards=state.flashcards.filter(x=>x.id!==b.dataset.cardDelete);renderQuiz();saveNow()}});
+function gainXP(amount,key){if(key&&state.earned[key])return;state.xp=(state.xp||0)+amount;if(key)state.earned[key]=true;saveNow()}
+function completedTaskCount(){return Object.values(state.checks).filter(Boolean).length+Object.values(state.customTasks).flat().filter(x=>x.done).length}
+function streakCount(){const days=new Set([...Object.entries(state.checks).filter(x=>x[1]).map(x=>x[0].slice(0,10)),...Object.entries(state.customTasks).flatMap(([d,a])=>a.some(x=>x.done)?[d]:[])]);let n=0,d=new Date(todayISO()+'T12:00:00');while(days.has(d.toISOString().slice(0,10))){n++;d.setDate(d.getDate()-1)}return n}
+const badgeDefs=[['first','🌱','First Step','Complete your first task',()=>completedTaskCount()>=1],['ten','🔥','Getting Started','Complete 10 tasks',()=>completedTaskCount()>=10],['twentyfive','⚡','Focused Learner','Complete 25 tasks',()=>completedTaskCount()>=25],['fifty','🏅','Consistency','Complete 50 tasks',()=>completedTaskCount()>=50],['notes','📚','Knowledge Keeper','Save 5 notes',()=>state.notes.length>=5],['mistakes','✍️','Learn & Improve','Log 5 mistakes',()=>state.mistakes.length>=5],['revision','🧠','Revision Pro','Complete 5 revision sessions',()=>state.revisions.reduce((n,x)=>n+x.done.length,0)>=5],['streak3','🌟','Three-day Streak','Make progress 3 days in a row',()=>streakCount()>=3]];
+function renderRewards(){if(!$('xpValue'))return;const xp=state.xp||0,level=Math.floor(xp/100)+1,into=xp%100;$('xpValue').textContent=xp;$('streakValue').textContent=streakCount();$('levelPill').textContent='Level '+level;$('xpBar').style.width=into+'%';$('levelText').textContent=`${100-into} XP to Level ${level+1}. Complete tasks (+10 XP), revisions (+5 XP), or answer practice (+2 XP each).`;$('badgeValue').textContent=badgeDefs.filter(b=>b[4]()).length;$('badges').innerHTML=badgeDefs.map(b=>`<div class="badge-card ${b[4]()?'':'locked'}"><div style="font-size:28px">${b[1]}</div><strong>${b[2]}</strong><small>${b[3]}</small></div>`).join('')}
+// Task XP is granted once per completed task; undoing does not erase earned XP.
+const originalToggleTask=toggleTask;toggleTask=function(id,checked){const was=isDone(id);state.checks[id]=checked;if(checked&&!was)gainXP(10,'task-'+id);saveNow();renderAll();renderRewards()};
+function refreshFeatures(){renderCustomTasks();renderSmart();renderMistakes();renderLibrary();renderRewards();const st=$('storageInfo');if(st){try{st.textContent='Saved data size: '+Math.round(new Blob([JSON.stringify(state)]).size/1024*10)/10+' KB · Browser storage only.'}catch(e){st.textContent='Browser storage is active.'}}}
+// Ensure custom task rows and all new features repaint when dates or sections change.
+const oldSetDate=setDate;setDate=function(d){oldSetDate(d);renderCustomTasks()};
+const oldShowView=showView;showView=function(name){oldShowView(name);if(['smart','mistakes','library','rewards','settings'].includes(name))refreshFeatures()};
+$('settingsExport').onclick=exportData;$('settingsImport').onclick=()=>$('importFile').click();$('installBtn2').onclick=()=>$('installBtn').click();$('requestNotify').onclick=async()=>{if(!('Notification'in window)){alert('Notifications are not supported by this browser.');return}const result=await Notification.requestPermission();alert('Notification permission: '+result)};
+$('resetAll').onclick=()=>{if(confirm('This will erase all saved planner data in this browser. Export a backup first. Continue?')){localStorage.removeItem(STORAGE);location.reload()}};
+// Keep original backup compatibility; all extended data is included in state.
+const oldImport=$('importFile').onchange;$('importFile').addEventListener('change',()=>setTimeout(()=>{refreshFeatures();saveNow()},100));
+// Installable PWA prompt (works when hosted on HTTPS/localhost with manifest + service worker).
+let deferredInstall=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;$('installBtn').hidden=false});$('installBtn').onclick=async()=>{if(!deferredInstall){alert('To install: open the hosted planner in Chrome, tap ⋮, then choose Install app / Add to Home screen.');return}deferredInstall.prompt();await deferredInstall.userChoice;deferredInstall=null;$('installBtn').hidden=true};
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+// Re-render auto-save status and include custom tasks in task list count.
+const baseRenderFullTasks=renderFullTasks;renderFullTasks=function(){baseRenderFullTasks();renderCustomTasks()};
+refreshFeatures();
+
+</script>
+</body>
+</html>
